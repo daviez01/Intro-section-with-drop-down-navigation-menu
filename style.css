@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Epilogue';
+    max-width: 1440px;
+    background-color: hsl(0, 0%, 98%);
+    font-size: 13px;
+}
+
+header {
+    position: fixed; 
+    width: 100vw;
+    margin: 20px auto;
+    padding: 0 3rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+.navbar {
+    height: 50px;
+}
+
+.nav-content {
+    color: hsl(0, 0%, 41%);
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1250px;
+}
+
+.menu {
+    display: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.logo {
+    padding-top: 5px;
+}
+
+.navigation {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+    cursor: pointer;
+    padding: 0.7rem 1.5rem;
+}
+
+.drop {
+    margin-left: 5px;
+}
+
+.navigation li:hover {
+    color: hsl(0, 0%, 8%);
+}
+
+/* .navigation li:hover ul, .navigation li:focus ul{
+    opacity: 1;
+    visibility: visible;
+}  */
+
+.sub-nav {
+    position: absolute;
+    top: 2rem;
+    background-color: white;
+    color: hsl(0, 0%, 41%);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 200ms ease-in-out;
+}
+
+.sub-nav.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sub-nav li img {
+    margin-right: 0.7rem;
+}
+
+.sub-nav li {
+    padding: 0.5rem 0;
+}
+
+.first {
+    left: -3.5rem;
+    width: 8rem;
+}
+
+.second {
+    left: 8rem;
+    width: 7rem;
+}
+
+.user-login {
+    color: hsl(0, 0%, 41%);
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.user-login li:hover {
+    color: hsl(0, 0%, 8%);
+}
+
+.user-login li {
+    text-align: center;
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    border: hsl(0, 0%, 98%) solid 0.1rem;
+}
+
+.user-login li:nth-child(2):hover {
+    border-radius: 10px;
+    border: hsl(0, 0%, 8%) solid 0.1rem;
+    color: hsl(0, 0%, 8%);
+    background: transparent;
+    padding: 0.7rem 1.5rem;
+}
+
+.hero {
+    max-width: 1000px;
+    margin:  auto;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    width: 400px;
+    align-self: end;
+}
+
+.right {
+    width: 400px;
+}
+
+.right img {
+    max-width: 100%;
+}
+
+.title h1 {
+    font-size: 3.7rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 8%);
+    padding: 2rem 0;
+}
+
+.title p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: hsl(0, 0%, 41%);
+    padding-bottom: 2rem;
+}
+
+.btn {
+    border-radius: 10px;
+    border: hsl(0, 0%, 8%) solid 0.1rem;
+    padding: 0.7rem 1.5rem;
+    background-color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+    margin-bottom: 6rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border: hsl(0, 0%, 8%) solid 0.1rem;
+    color: hsl(0, 0%, 8%);
+    background: transparent;
+}
+
+.clients {
+    display: flex;
+    justify-content: space-between;
+}
+.clients img {
+    height: 1.2rem;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 430px) {
+    header {
+        padding: 0 1rem;
+    }
+
+    .menu {
+        display: block;
+        position: relative;
+    }
+
+    .close-menu {
+        display: none;
+        position: absolute;
+        top: -17px;
+        left: -27px;
+    }
+
+    .close-menu.active {
+        display: block;
+    }
+
+    .nav-content {
+        justify-content: space-between;
+    }
+
+    .nav-container {
+        display: none;
+    }
+
+    .nav-container.active {
+        display: block;
+        background-color: hsl(0, 0%, 98%);
+        font-size: 1rem;
+        position: absolute;
+        top: 55px;
+        left: 136px;
+        flex-direction: column;
+        width: 64vw;
+        height: 100vh;
+    }
+
+    .user-login li:nth-child(2) {
+        border-radius: 10px;
+        border: hsl(0, 0%, 41%) solid 0.1rem;
+        background: transparent;
+        padding: 0.7rem 1.5rem;
+    }
+
+    .navigation {
+        flex-direction: column;
+        gap: unset;
+    }
+
+    .navigation li {
+        padding: 8px;
+    }
+
+   .sub-nav.first, .sub-nav.second {
+       display: none;
+       position: initial;
+       border-radius: 0;
+       background: none;
+       box-shadow: none;
+       top: auto;
+       left: auto;
+       width: 10rem;
+       padding: 0.8rem;
+       padding-bottom: 0;
+       opacity: 1;
+       visibility: visible;
+       transition: opacity 200ms ease-in-out;
+   }
+
+   .sub-nav.first.active, .sub-nav.second.active {
+       display: block;
+   }
+    
+    .drop {
+        margin-left: 10px;
+    }
+
+    .user-login {
+        flex-direction: column;
+        padding: 0 1.5rem;
+    }
+
+    .hero {
+        padding-top: 5rem;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        margin: auto;
+    }
+
+    .right {
+        background-image: url(./images/image-hero-mobile.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 300px;
+    }
+
+    .right img {
+        visibility: hidden;
+    }
+
+    .left {
+        width: 21rem;
+        margin: auto;
+        align-self: center;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .title h1 {
+        font-size: 2rem;
+        padding: 1rem 0;
+    }
+
+    .title p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        margin-bottom: 2.5rem;
+    }
+
+    .clients {
+        margin-bottom: 4rem;
+    }
+
+    .attribution {
+        margin: 10px;
+    }
+}
