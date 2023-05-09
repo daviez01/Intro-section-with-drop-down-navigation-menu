@@ -28,8 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [daviez01.github.io](https://daviez01.github.io/Intro-section-with-drop-down-navigation-menu/)
 
 ## My process
 
